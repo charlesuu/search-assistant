@@ -1,5 +1,7 @@
 package com.hyunho.springboot.web;
 
+import com.hyunho.springboot.config.auth.LoginUser;
+import com.hyunho.springboot.config.auth.dto.SessionUser;
 import com.hyunho.springboot.service.posts.PostsService;
 import com.hyunho.springboot.web.dto.PostsResponseDto;
 import lombok.RequiredArgsConstructor;
@@ -14,8 +16,11 @@ public class IndexController {
     private final PostsService postsService;
 
     @GetMapping("/")
-    public String index(Model model) {
+    public String index(Model model, @LoginUser SessionUser user) {
         model.addAttribute("posts", postsService.findAllDesc());
+        if (user != null) {
+            model.addAttribute("userName", user.getName());
+        }
         return "index";
     }
 
