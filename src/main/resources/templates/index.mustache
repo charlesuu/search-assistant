@@ -1,10 +1,10 @@
 {{>layout/header}}
 
-    <h1>스프링 부트로 시작하는 웹 서비스</h1>
+    <h1>ChatGPT-3를 활용한 인공지능 웹 서비스</h1>
     <div class="col-md-12">
         <div class="row">
             <div class="col-md-6">
-                <a href="/posts/save" role="button" class="btn btn-primary">글 등록</a>
+                <a href="/posts/save" role="button" class="btn btn-primary">AI에게 질문하기</a>
                 {{#userName}}
                     Logged in as: <span id="user">{{userName}}</span>
                     <a href="/logout" class="btn btn-info active" role="button">Logout</a>
@@ -22,8 +22,8 @@
         <table class="table table-horizontal table-bordered">
             <thead class="thead-strong">
             <tr>
-                <th>게시글번호</th>
-                <th>제목</th>
+                <th>질문 번호</th>
+                <th>질문 내용</th>
                 <th>작성자</th>
                 <th>최종수정일</th>
             </tr>
@@ -39,7 +39,6 @@
             {{/posts}}
             </tbody>
         </table>
-
     </div>
 
 {{>layout/footer}}
