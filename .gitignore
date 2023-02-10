@@ -1,4 +1,4 @@
-src/main/resources/application-oauth.properties
-src/main/resources/application.properties
-src/main/java/com/hyunho/springboot/config/ChatGptConfig.java
-src/main/resources/apikey.properties
+application-oauth.properties
+application.properties
+ChatGptConfig.java
+apikey.properties
